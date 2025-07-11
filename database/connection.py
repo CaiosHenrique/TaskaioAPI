@@ -1,9 +1,14 @@
 import os
 from motor.motor_asyncio import AsyncIOMotorClient
 from datetime import datetime
+from dotenv import load_dotenv
+
+# Carregar variáveis de ambiente do arquivo .env
+load_dotenv()
 
 # Configuração da conexão com MongoDB
 MONGODB_URL = os.getenv("MONGODB_URL", "mongodb://localhost:27017")
+print(f"🔗 Conectando ao MongoDB: {MONGODB_URL}")
 client = AsyncIOMotorClient(MONGODB_URL)
 db = client.taskaio
 tasks_collection = db.tasks
