@@ -1,0 +1,36 @@
+{
+  "name": "taskaio-api",
+  "version": "1.0.0",
+  "description": "Backend FastAPI para o aplicativo mobile Taskaio",
+  "scripts": {
+    "docker": "docker-compose up -d --build && echo \"✅ Containers executados com sucesso!\" && echo \"📋 API: http://localhost:8000\" && echo \"📋 Docs: http://localhost:8000/docs\" && echo \"📋 MongoDB: mongodb://localhost:27017\"",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:restart": "docker-compose restart",
+    "docker:clean": "docker-compose down -v --rmi all",
+    "docker:status": "docker-compose ps",
+    "dev": "python main.py",
+    "test": "curl http://localhost:8000 || echo 'API não está rodando'",
+    "docs": "start http://localhost:8000/docs"
+  },
+  "keywords": [
+    "fastapi",
+    "python",
+    "mongodb",
+    "docker",
+    "api",
+    "tasks"
+  ],
+  "author": "Taskaio Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seu-usuario/taskaio-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seu-usuario/taskaio-api/issues"
+  },
+  "homepage": "https://github.com/seu-usuario/taskaio-api#readme"
+}
