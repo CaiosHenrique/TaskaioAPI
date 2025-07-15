@@ -52,7 +52,7 @@ async def create_task(task: TaskCreate):
             }
         )
 
-@router.put("/{task_id}", response_model=Task)
+@router.put("/tasks/{task_id}", response_model=Task)
 async def update_task(task_id: str, task: TaskUpdate):
     """Atualizar uma tarefa existente (aceita ObjectId ou task_id)"""
     try:
